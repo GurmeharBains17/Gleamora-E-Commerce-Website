@@ -1,0 +1,558 @@
+/* === NAVBAR STYLES === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b65a3c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff4d4d;
+}
+
+/* === SLIDER STYLES === */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Decrease height */
+  max-height: 600px; /* Prevents it from getting too tall on big screens */
+  overflow: hidden;
+}
+
+
+.slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;        /* Ensures it fills the container */
+  background-repeat: no-repeat;
+  background-position: center;   /* Centers the image */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: contain;   /* keep "cover" for full fit */
+  background-position: center center; /* better centering */
+}
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes image fill without distortion */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.slide-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+
+.slide-content {
+  margin-left: 60px;
+  max-width: 400px;
+  color: #fff;
+}
+
+.slide-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #ccc;
+}
+
+.brand-logo {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+/* Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+  gap: 10px;
+}
+
+.slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.slider-dots .dot.active {
+  opacity: 1;
+  background-color: #000;
+}
+.container {
+  max-width: 1200px;      /* Controls the content width */
+  margin: 0 auto;         /* Centers the container */
+  padding-left: 40px;     /* Adds left space */
+  padding-right: 20px;    /* Optional: right padding */
+}
+
+.fragrance-section {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.fragrance-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.fragrance-categories {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem; /* Increased gap for more spacing */
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.fragrance-item {
+  text-align: center;
+  min-width: 150px; /* Increased min-width */
+}
+
+.fragrance-item img {
+  width: 140px;  /* Increased image size */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.fragrance-item p {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+}
+
+
+.perfume-offers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.offer-card {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+  text-align: center;
+}
+
+.offer-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.offer-text {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+.selling-fast-section {
+  padding: 2rem 0;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.product-card {
+  min-width: 220px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.product-card img {
+  width: 100px;     /* or 150px - adjust as needed */
+  height: 200px;    /* fixed height to keep uniform card size */
+  object-fit: contain;
+  margin: 0 auto 0.8rem;
+  display: block;
+}
+.product-card {
+  min-width: 200px;  /* reduced from 220px */
+  padding: 0.8rem;   /* slightly less padding */
+}
+
+
+.brand-name {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.4rem;
+}
+
+.discount {
+  font-size: 0.9rem;
+  color: green;
+  margin-left: 0.3rem;
+}
+
+.discount-info {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.size-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.size-options button {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.brands-to-know-section {
+  background-color: #fdf3ef; /* light peach/pink tone */
+  padding: 3rem 0;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.brand-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.brand-card {
+  background-color: white;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+  padding: 1rem;
+}
+
+.brand-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.brand-offer {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.shop-now {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: black;
+}
+
+/* === GLOBAL IMAGE HOVER EFFECT === */
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Target only specific image classes */
+.fragrance-item img:hover,
+.offer-card img:hover,
+.product-card img:hover,
+.brand-card img:hover,
+.slide-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+/* === FOOTER STYLES === */
+.footer {
+  background-color: white;
+  color: #1a1a1a;
+  padding: 40px 20px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-brand h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #b65a3c;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  max-width: 250px;
+  color: #555;
+}
+
+.footer-links,
+.footer-social,
+.footer-newsletter {
+  flex: 1 1 200px;
+}
+
+.footer-links h3,
+.footer-social h3,
+.footer-newsletter h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #b65a3c;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #b65a3c;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  background-color: #b65a3c;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.social-icon:hover {
+  background-color: #8a4228;
+}
+
+.footer-newsletter p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+#newsletterForm {
+  display: flex;
+  gap: 10px;
+}
+
+#newsletterForm input[type="email"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#newsletterForm input[type="email"]:focus {
+  outline: none;
+  border-color: #b65a3c;
+}
+
+#newsletterForm button {
+  background-color: #b65a3c;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+#newsletterForm button:hover {
+  background-color: #8a4228;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .slide-content {
+    margin-left: 20px;
+  }
+
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+
+  .shop-btn {
+    padding: 10px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-social,
+  .footer-newsletter {
+    width: 100%;
+  }
+}

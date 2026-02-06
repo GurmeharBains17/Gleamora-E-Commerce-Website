@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gleamora - Beauty Redefined</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FF85A2',  // Default pink color
+              secondary: '#A78BFA', // Default purple color
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+      
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      .hero-section {
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('http://static.photos/cosmetic/1200x630/42');
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .playfair {
+        font-family: 'Playfair Display', serif;
+      }
+      
+      .product-card:hover .product-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .product-overlay {
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      
+      .navbar {
+        backdrop-filter: blur(10px);
+      }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 bg-white/90 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold playfair text-primary">Gleamora</a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-gray-700 hover:text-primary transition">Shop</a>
+            <a href="#" class="text-gray-700 hover:text-primary transition">Brands</a>
+            <a href="#" class="text-gray-700 hover:text-primary transition">Beauty</a>
+            <a href="#" class="text-gray-700 hover:text-primary transition">About</a>
+            <a href="#" class="text-gray-700 hover:text-primary transition">Contact</a>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <a href="#"><i data-feather="search" class="text-gray-700 hover:text-primary transition"></i></a>
+            <a href="#"><i data-feather="user" class="text-gray-700 hover:text-primary transition"></i></a>
+            <a href="#"><i data-feather="shopping-bag" class="text-gray-700 hover:text-primary transition"></i></a>
+            <button class="md:hidden">
+              <i data-feather="menu" class="text-gray-700"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section h-[80vh] flex items-center justify-center text-white relative">
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="relative z-10 text-center px-4">
+        <h1 class="playfair text-4xl md:text-6xl font-bold mb-4">Discover Your Glow</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Premium beauty products curated for your unique radiance</p>
+        <a href="#" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition inline-block">Shop Now</a>
+      </div>
+    </section>
+    
+    <!-- Categories -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <h2 class="playfair text-3xl text-center mb-12">Our Collections</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="relative overflow-hidden rounded-lg h-60 group">
+          <img src="http://static.photos/cosmetic/640x360/1" alt="Skincare" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+            <h3 class="text-white font-medium text-xl">Skincare</h3>
+          </div>
+          <a href="#" class="absolute inset-0"></a>
+        </div>
+        <div class="relative overflow-hidden rounded-lg h-60 group">
+          <img src="http://static.photos/cosmetic/640x360/2" alt="Makeup" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+            <h3 class="text-white font-medium text-xl">Makeup</h3>
+          </div>
+          <a href="#" class="absolute inset-0"></a>
+        </div>
+        <div class="relative overflow-hidden rounded-lg h-60 group">
+          <img src="http://static.photos/cosmetic/640x360/3" alt="Haircare" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+            <h3 class="text-white font-medium text-xl">Haircare</h3>
+          </div>
+          <a href="#" class="absolute inset-0"></a>
+        </div>
+        <div class="relative overflow-hidden rounded-lg h-60 group">
+          <img src="http://static.photos/cosmetic/640x360/4" alt="Fragrance" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+            <h3 class="text-white font-medium text-xl">Fragrance</h3>
+          </div>
+          <a href="#" class="absolute inset-0"></a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="playfair text-3xl text-center mb-12">Featured Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Product 1 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden shadow-md relative">
+            <div class="relative overflow-hidden">
+              <img src="http://static.photos/cosmetic/640x360/5" alt="Product" class="w-full h-64 object-cover">
+              <div class="product-overlay absolute inset-0 bg-black/20 flex items-center justify-center">
+                <button class="bg-primary text-white px-6 py-2 rounded-full font-medium">Quick View</button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-medium">Hydrating Serum</h3>
+                <span class="text-primary">$42.00</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-3">For all skin types</p>
+              <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition">Add to Bag</button>
+            </div>
+          </div>
+          
+          <!-- Product 2 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden shadow-md relative">
+            <div class="relative overflow-hidden">
+              <img src="http://static.photos/cosmetic/640x360/6" alt="Product" class="w-full h-64 object-cover">
+              <div class="product-overlay absolute inset-0 bg-black/20 flex items-center justify-center">
+                <button class="bg-primary text-white px-6 py-2 rounded-full font-medium">Quick View</button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-medium">Matte Lipstick</h3>
+                <span class="text-primary">$28.00</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-3">12 shades available</p>
+              <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition">Add to Bag</button>
+            </div>
+          </div>
+          
+          <!-- Product 3 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden shadow-md relative">
+            <div class="relative overflow-hidden">
+              <img src="http://static.photos/cosmetic/640x360/7" alt="Product" class="w-full h-64 object-cover">
+              <div class="product-overlay absolute inset-0 bg-black/20 flex items-center justify-center">
+                <button class="bg-primary text-white px-6 py-2 rounded-full font-medium">Quick View</button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-medium">Night Cream</h3>
+                <span class="text-primary">$56.00</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-3">Anti-aging formula</p>
+              <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition">Add to Bag</button>
+            </div>
+          </div>
+          
+          <!-- Product 4 -->
+          <div class="product-card bg-white rounded-lg overflow-hidden shadow-md relative">
+            <div class="relative overflow-hidden">
+              <img src="http://static.photos/cosmetic/640x360/8" alt="Product" class="w-full h-64 object-cover">
+              <div class="product-overlay absolute inset-0 bg-black/20 flex items-center justify-center">
+                <button class="bg-primary text-white px-6 py-2 rounded-full font-medium">Quick View</button>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-medium">Perfume Oil</h3>
+                <span class="text-primary">$68.00</span>
+              </div>
+              <p class="text-gray-500 text-sm mb-3">Eau de Parfum</p>
+              <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded transition">Add to Bag</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-medium transition">View All Products</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Beauty Tips -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <h2 class="playfair text-3xl text-center mb-12">Beauty Tips & Trends</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-lg overflow-hidden shadow-md">
+          <img src="http://static.photos/cosmetic/640x360/9" alt="Beauty Tip" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="font-medium text-xl mb-2">Summer Skin Care Routine</h3>
+            <p class="text-gray-600 mb-4">Discover how to protect and nourish your skin during the hot summer months.</p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              Read More
+              <i data-feather="arrow-right" class="ml-2 w-4"></i>
+            </a>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-md">
+          <img src="http://static.photos/cosmetic/640x360/10" alt="Beauty Tip" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="font-medium text-xl mb-2">Natural Makeup Look</h3>
+            <p class="text-gray-600 mb-4">Step-by-step guide to achieving that perfect no-makeup makeup look.</p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              Read More
+              <i data-feather="arrow-right" class="ml-2 w-4"></i>
+            </a>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden shadow-md">
+          <img src="http://static.photos/cosmetic/640x360/11" alt="Beauty Tip" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="font-medium text-xl mb-2">Hair Care Essentials</h3>
+            <p class="text-gray-600 mb-4">The must-have products for healthy, shiny hair all year round.</p>
+            <a href="#" class="text-primary font-medium flex items-center">
+              Read More
+              <i data-feather="arrow-right" class="ml-2 w-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary text-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="playfair text-3xl mb-4">Join Our Beauty Community</h2>
+        <p class="mb-8">Subscribe to our newsletter for exclusive offers, beauty tips, and new product launches.</p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded focus:outline-none text-gray-800">
+          <button type="submit" class="bg-white text-primary px-6 py-3 rounded font-medium hover:bg-gray-100 transition">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="playfair text-white text-xl mb-4">Gleamora</h3>
+            <p class="mb-4">Premium beauty products curated for your unique radiance.</p>
+            <div class="flex space-x-4">
+              <a href="#"><i data-feather="facebook" class="hover:text-primary transition"></i></a>
+              <a href="#"><i data-feather="instagram" class="hover:text-primary transition"></i></a>
+              <a href="#"><i data-feather="twitter" class="hover:text-primary transition"></i></a>
+              <a href="#"><i data-feather="youtube" class="hover:text-primary transition"></i></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-medium mb-4">Shop</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">Skincare</a></li>
+              <li><a href="#" class="hover:text-primary transition">Makeup</a></li>
+              <li><a href="#" class="hover:text-primary transition">Haircare</a></li>
+              <li><a href="#" class="hover:text-primary transition">Fragrance</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-medium mb-4">Help</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">Customer Service</a></li>
+              <li><a href="#" class="hover:text-primary transition">Shipping & Returns</a></li>
+              <li><a href="#" class="hover:text-primary transition">Track Order</a></li>
+              <li><a href="#" class="hover:text-primary transition">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-medium mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i data-feather="map-pin" class="mr-2 mt-1 w-4"></i>
+                <span>123 Beauty St, Glamour City</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="mail" class="mr-2 mt-1 w-4"></i>
+                <span>hello@gleamora.com</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="phone" class="mr-2 mt-1 w-4"></i>
+                <span>(123) 456-7890</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p>© 2023 Gleamora. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-primary transition">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      feather.replace();
+      
+      // Mobile menu toggle would go here
+      document.querySelector('.md\\:hidden').addEventListener('click', function() {
+        // Toggle mobile menu
+      });
+      
+      // Simple animation for hero section
+      anime({
+        targets: '.hero-section h1',
+        opacity: [0, 1],
+        translateY: [50, 0],
+        duration: 1000,
+        easing: 'easeOutExpo'
+      });
+      
+      anime({
+        targets: '.hero-section p, .hero-section a',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 1000,
+        delay: 300,
+        easing: 'easeOutExpo'
+      });
+    </script>
+</body>
+</html>
